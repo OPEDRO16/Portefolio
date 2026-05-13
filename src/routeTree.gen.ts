@@ -10,7 +10,6 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as NowRouteImport } from './routes/now'
-import { Route as IndexRouteImport } from './routes/index'
 import { Route as ProjectsWebRouteImport } from './routes/projects.web'
 import { Route as ProjectsPythonRouteImport } from './routes/projects.python'
 import { Route as ProjectsOctopusRouteImport } from './routes/projects.octopus'
@@ -25,11 +24,6 @@ import { Route as Projects3dRouteImport } from './routes/projects.3d'
 const NowRoute = NowRouteImport.update({
   id: '/now',
   path: '/now',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const IndexRoute = IndexRouteImport.update({
-  id: '/',
-  path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ProjectsWebRoute = ProjectsWebRouteImport.update({
@@ -84,7 +78,6 @@ const Projects3dRoute = Projects3dRouteImport.update({
 } as any)
 
 export interface FileRoutesByFullPath {
-  '/': typeof IndexRoute
   '/now': typeof NowRoute
   '/projects/3d': typeof Projects3dRoute
   '/projects/ChaosGame': typeof ProjectsChaosGameRoute
@@ -98,7 +91,6 @@ export interface FileRoutesByFullPath {
   '/projects/web': typeof ProjectsWebRoute
 }
 export interface FileRoutesByTo {
-  '/': typeof IndexRoute
   '/now': typeof NowRoute
   '/projects/3d': typeof Projects3dRoute
   '/projects/ChaosGame': typeof ProjectsChaosGameRoute
@@ -113,7 +105,6 @@ export interface FileRoutesByTo {
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
-  '/': typeof IndexRoute
   '/now': typeof NowRoute
   '/projects/3d': typeof Projects3dRoute
   '/projects/ChaosGame': typeof ProjectsChaosGameRoute
@@ -129,7 +120,6 @@ export interface FileRoutesById {
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
-    | '/'
     | '/now'
     | '/projects/3d'
     | '/projects/ChaosGame'
@@ -143,7 +133,6 @@ export interface FileRouteTypes {
     | '/projects/web'
   fileRoutesByTo: FileRoutesByTo
   to:
-    | '/'
     | '/now'
     | '/projects/3d'
     | '/projects/ChaosGame'
@@ -157,7 +146,6 @@ export interface FileRouteTypes {
     | '/projects/web'
   id:
     | '__root__'
-    | '/'
     | '/now'
     | '/projects/3d'
     | '/projects/ChaosGame'
@@ -172,7 +160,6 @@ export interface FileRouteTypes {
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
-  IndexRoute: typeof IndexRoute
   NowRoute: typeof NowRoute
   Projects3dRoute: typeof Projects3dRoute
   ProjectsChaosGameRoute: typeof ProjectsChaosGameRoute
@@ -193,13 +180,6 @@ declare module '@tanstack/react-router' {
       path: '/now'
       fullPath: '/now'
       preLoaderRoute: typeof NowRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/': {
-      id: '/'
-      path: '/'
-      fullPath: '/'
-      preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/projects/web': {
@@ -276,7 +256,6 @@ declare module '@tanstack/react-router' {
 }
 
 const rootRouteChildren: RootRouteChildren = {
-  IndexRoute: IndexRoute,
   NowRoute: NowRoute,
   Projects3dRoute: Projects3dRoute,
   ProjectsChaosGameRoute: ProjectsChaosGameRoute,

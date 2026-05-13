@@ -72,20 +72,20 @@ function OctoplusPage() {
           <div className="grid grid-cols-1 gap-4">
             <div className="aspect-[5/4] rounded-3xl border border-border bg-foreground/5 flex items-center justify-center text-muted-foreground text-center p-3">
               <div>
-                <img loading="lazy" decoding="async" src="/Images/Bag.jpg" alt="Bag" className="w-full h-auto mb-4" />
+                <img loading="lazy" decoding="async" src="/Images/Bag.webp" alt="Bag" className="w-full h-auto mb-4" />
                 <p className="text-xs">Bag</p>
               </div>
             </div>
             <div className="aspect-[5/4] rounded-3xl border border-border bg-foreground/5 flex items-center justify-center text-muted-foreground text-center p-3">
               <div>
-                <img loading="lazy" decoding="async" src="/Images/Sweat.jpg" alt="SweatShirt" className="w-full h-auto mb-4" />
+                <img loading="lazy" decoding="async" src="/Images/Sweat.webp" alt="SweatShirt" className="w-full h-auto mb-4" />
                 <p className="text-xs">SweatShirt</p>
               </div>
             </div>
           </div>
           <div className="rounded-3xl border border-border bg-foreground/5 flex items-center justify-center text-muted-foreground text-center p-3">
             <div className="flex flex-col items-center justify-center w-full">
-              <img loading="lazy" decoding="async" src="/Images/wall.jpg" alt="Wall Plate" className="w-full h-auto mb-4" />
+              <img loading="lazy" decoding="async" src="/Images/wall.webp" alt="Wall Plate" className="w-full h-auto mb-4" />
               <p className="text-xs">Wall Plate</p>
             </div>
           </div>
@@ -101,19 +101,19 @@ function OctoplusPage() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           <div className="aspect-[4/3] rounded-3xl border border-border bg-foreground/5 flex items-center justify-center text-muted-foreground text-center p-4">
             <div>
-              <img loading="lazy" decoding="async" src="/Images/carrosel1.jpg" alt="Main Logotype & Symbol" className="w-full h-auto mb-4" />
+              <img loading="lazy" decoding="async" src="/Images/carrosel1.webp" alt="Main Logotype & Symbol" className="w-full h-auto mb-4" />
               <p className="text-xs">Carousel 1</p>
             </div>
           </div>
           <div className="aspect-[4/3] rounded-3xl border border-border bg-foreground/5 flex items-center justify-center text-muted-foreground text-center p-4">
             <div>
-              <img loading="lazy" decoding="async" src="/Images/carrosel2.jpg" alt="Main Logotype & Symbol" className="w-full h-auto mb-4" />
+              <img loading="lazy" decoding="async" src="/Images/carrosel2.webp" alt="Main Logotype & Symbol" className="w-full h-auto mb-4" />
               <p className="text-xs">Carousel 2</p>
             </div>
           </div>
           <div className="aspect-[4/3] rounded-3xl border border-border bg-foreground/5 flex items-center justify-center text-muted-foreground text-center p-4">
             <div>
-              <img loading="lazy" decoding="async" src="/Images/carrosel3.jpg" alt="Main Logotype & Symbol" className="w-full h-auto mb-4" />
+              <img loading="lazy" decoding="async" src="/Images/carrosel3.webp" alt="Main Logotype & Symbol" className="w-full h-auto mb-4" />
               <p className="text-xs">Carousel 3</p>
             </div>
           </div>
@@ -130,7 +130,7 @@ function OctoplusPage() {
             </div>
             <div className="rounded-3xl border border-border bg-foreground/5 flex items-center justify-center text-muted-foreground text-center p-4">
               <div className="w-full">
-                <img loading="lazy" decoding="async" src="/Images/OutdoorJPG.jpg" alt="Outdoor" className="w-full h-auto mb-4" />
+                <img loading="lazy" decoding="async" src="/Images/Outdoor.webp" alt="Outdoor" className="w-full h-auto mb-4" />
                 <p className="text-xs">Outdoor</p>
               </div>
             </div>
@@ -178,7 +178,7 @@ function OctoplusPage() {
           </div>
           <div className="rounded-3xl border border-border bg-foreground/5 flex items-center justify-center text-muted-foreground text-center p-4">
             <div className="w-full">
-              <img loading="lazy" decoding="async" src="/Images/MupiJPG.jpg" alt="Mupi" className="w-full h-auto mb-4" />
+              <img loading="lazy" decoding="async" src="/Images/Mupi.webp" alt="Mupi" className="w-full h-auto mb-4" />
               <p className="text-xs">Mupi</p>
             </div>
           </div>

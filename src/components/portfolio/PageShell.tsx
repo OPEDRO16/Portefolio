@@ -50,13 +50,6 @@ export function PageShell({ children, showBack = false, backTo = "/" }: PageShel
               </button>
             )}
             <a
-              href="mailto:pepedromarques007@gmail.com"
-              aria-label="Email"
-              className="p-2 hover:opacity-60 transition-opacity"
-            >
-              <Mail className="h-4 w-4" />
-            </a>
-            <a
               href="https://github.com/OPEDRO16"
               target="_blank"
               rel="noreferrer"

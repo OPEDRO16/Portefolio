@@ -119,7 +119,7 @@ function RoPaScPage() {
         <div className="grid grid-cols-1 md:grid-cols-1 gap-4">
           <div className="aspect-[4/3] rounded-3xl border border-border bg-foreground/5 flex items-center justify-center text-muted-foreground text-center p-4">
             <div>
-              <img src="/Images/RPS.png" alt="Main Logotype & Symbol" className="w-full h-auto mb-4" />
+              <img src="/Images/RPS.webp" alt="Main Logotype & Symbol" className="w-full h-auto mb-4" />
               <p className="text-xs">Simulation Interface Snapshot</p>
             </div>
           </div>

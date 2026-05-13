@@ -58,7 +58,7 @@ function ChaosGamePage() {
           </div>
         </div>
         <div className="aspect-video w-full rounded-3xl border border-border bg-foreground/5 flex flex-col items-center justify-center text-muted-foreground text-center p-4">
-          <img src="/Images/MainChaos.png" alt="Main Chaos Game Image" className="w-full h-auto mb-4" />
+          <img src="/Images/MainChaos.webp" alt="Main Chaos Game Image" className="w-full h-auto mb-4" />
           <p className="text-xs">Restricted Chaos Star</p>
         </div>
       </section>
@@ -100,7 +100,7 @@ function ChaosGamePage() {
               </p>
             </div>
             <div className="w-full lg:w-[40%] shrink-0 rounded-3xl border border-border bg-foreground/5 flex flex-col items-center justify-center text-muted-foreground text-center p-4">
-              <img src="/Images/ChaosSimple.png" alt="Simple Chaos Game" className="w-full rounded-2xl h-auto mb-4" />
+              <img src="/Images/ChaosSimple.webp" alt="Simple Chaos Game" className="w-full rounded-2xl h-auto mb-4" />
               <p className="text-xs">Simple Chaos Game</p>
             </div>
           </div>
@@ -108,7 +108,7 @@ function ChaosGamePage() {
           {/* 4.2 Interactive Version */}
           <div className="flex flex-col lg:flex-row lg:items-start gap-8">
             <div className="w-full lg:w-[40%] shrink-0 rounded-3xl border border-border bg-foreground/5 flex flex-col items-center justify-center text-muted-foreground text-center p-4">
-              <img src="/Images/InteractiveChaos.png" alt="Interactive Chaos Game" className="w-full rounded-2xl h-auto mb-4" />
+              <img src="/Images/InteractiveChaos.webp" alt="Interactive Chaos Game" className="w-full rounded-2xl h-auto mb-4" />
               <p className="text-xs">Interactive Chaos Game</p>
             </div>
             <div className="flex-1">
@@ -127,11 +127,11 @@ function ChaosGamePage() {
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div className="aspect-[4/3] rounded-3xl border border-border bg-foreground/5 flex flex-col items-center justify-center text-muted-foreground text-center p-4">
-                <img src="/Images/FlakeChaos.png" alt="Flake Structure" className="w-full rounded-2xl h-auto mb-4" />
+                <img src="/Images/FlakeChaos.webp" alt="Flake Structure" className="w-full rounded-2xl h-auto mb-4" />
                 <p className="text-xs">Flake Structure</p>
               </div>
               <div className="aspect-[4/3] rounded-3xl border border-border bg-foreground/5 flex flex-col items-center justify-center text-muted-foreground text-center p-4">
-                <img src="/Images/VicsekChaos.png" alt="Vicsek Structure" className="w-full rounded-2xl h-auto mb-4" />
+                <img src="/Images/VicsekChaos.webp" alt="Vicsek Structure" className="w-full rounded-2xl h-auto mb-4" />
                 <p className="text-xs">Vicsek Structure</p>
               </div>
             </div>
@@ -187,7 +187,7 @@ function ChaosGamePage() {
               The final image is constructed based on the number of iterations required for each point to diverge. This value is used to assign color to pixels, allowing the highlighting of details, complex boundaries, and transition zones characteristic of these fractals.
             </p>
             <div className="w-full rounded-3xl border border-border bg-foreground/5 flex flex-col items-center justify-center text-muted-foreground text-center p-4">
-              <img src="/Images/Julia.jpg" alt="Results" className="w-full rounded-2xl h-auto mb-4" />
+              <img src="/Images/Julia.webp" alt="Results" className="w-full rounded-2xl h-auto mb-4" />
               <p className="text-xs">Results</p>
             </div>
           </div>

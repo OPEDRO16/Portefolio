@@ -109,7 +109,7 @@ function IECDPage() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           <div className="aspect-[4/3] rounded-3xl border border-border bg-foreground/5 flex items-center justify-center text-muted-foreground text-center p-4">
             <div>
-              <img loading="lazy" decoding="async" src="/Images/profileIECD.png" alt="Profile Settings" className="w-full h-auto mb-4" />
+              <img loading="lazy" decoding="async" src="/Images/profileIECD.webp" alt="Profile Settings" className="w-full h-auto mb-4" />
               <p className="text-xs">Profile Settings</p>
             </div>
           </div>
@@ -121,13 +121,13 @@ function IECDPage() {
           </div>
           <div className="aspect-[4/3] rounded-3xl border border-border bg-foreground/5 flex items-center justify-center text-muted-foreground text-center p-4">
             <div>
-              <img loading="lazy" decoding="async" src="/Images/ranking.png" alt="Hall of Fame" className="w-full h-auto mb-4" />
+              <img loading="lazy" decoding="async" src="/Images/ranking.webp" alt="Hall of Fame" className="w-full h-auto mb-4" />
               <p className="text-xs">Hall of Fame</p>
             </div>
           </div>
           <div className="md:col-span-3 rounded-3xl border border-border bg-foreground/5 flex items-center justify-center text-muted-foreground text-center p-4">
             <div className="w-full md:w-4/5 lg:w-3/4 mx-auto">
-              <img loading="lazy" decoding="async" src="/Images/5row.png" alt="Game Interface" className="w-full h-auto mb-4" />
+              <img loading="lazy" decoding="async" src="/Images/5row.webp" alt="Game Interface" className="w-full h-auto mb-4" />
               <p className="text-xs">Game Interface</p>
             </div>
           </div>

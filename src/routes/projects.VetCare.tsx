@@ -261,7 +261,7 @@ function VetCarePage() {
               </p>
             </div>
             <div className="w-full lg:w-[45%] shrink-0 rounded-3xl border border-border bg-foreground/5 flex flex-col items-center justify-center text-muted-foreground text-center p-4 aspect-[4/3] lg:aspect-auto min-h-[250px]">
-              <img src="/Images/Excesso.png" alt="Overweight Animals" className="w-full rounded-2xl h-auto mb-4" />
+              <img src="/Images/Excesso.webp" alt="Overweight Animals" className="w-full rounded-2xl h-auto mb-4" />
               <p className="text-xs">Overweight Animals</p>
             </div>
           </div>
