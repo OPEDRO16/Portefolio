@@ -30,7 +30,7 @@ const skills: { name: string; slug?: string; customIcon?: React.ReactNode }[] = 
   { name: "Notion", slug: "notion" },
   { name: "IntelliJ IDEA", slug: "intellijidea" },
   { name: "WebStorm", slug: "webstorm" },
-  { name: "VS Code", slug: "vscodium" },
+  { name: "VS Code", slug: "vscode" },
   { name: "Git", slug: "git" },
   { name: "Illustrator", slug: "illustrator" },
   { name: "Krita", slug: "krita" },

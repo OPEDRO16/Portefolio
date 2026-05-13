@@ -16,9 +16,10 @@ export const Route = createFileRoute("/projects/python")({
       subtitle="Data exploration, automation scripts and small machine learning experiments."
       projects={[
         {
-          title: "Data Notebook",
-          description: "A Jupyter notebook exploring a dataset, with charts and conclusions.",
-          tags: ["Python", "Jupyter", "pandas"],
+          title: "AI Agents Development",
+          description: "Academic project in Python and Java about intelligent agents, control architectures and decision-making in simulated environments.",
+          link: "/projects/IASA",
+          tags: ["Python", "Java", "AI", "Agents"],
         },
         {
           title: "Automation Script",

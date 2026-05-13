@@ -19,6 +19,7 @@ import { Route as ProjectsDesignRouteImport } from './routes/projects.design'
 import { Route as ProjectsVetCareRouteImport } from './routes/projects.VetCare'
 import { Route as ProjectsRoPaScRouteImport } from './routes/projects.RoPaSc'
 import { Route as ProjectsIECDRouteImport } from './routes/projects.IECD'
+import { Route as ProjectsIASARouteImport } from './routes/projects.IASA'
 import { Route as ProjectsChaosGameRouteImport } from './routes/projects.ChaosGame'
 import { Route as Projects3dRouteImport } from './routes/projects.3d'
 
@@ -72,6 +73,11 @@ const ProjectsIECDRoute = ProjectsIECDRouteImport.update({
   path: '/projects/IECD',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ProjectsIASARoute = ProjectsIASARouteImport.update({
+  id: '/projects/IASA',
+  path: '/projects/IASA',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ProjectsChaosGameRoute = ProjectsChaosGameRouteImport.update({
   id: '/projects/ChaosGame',
   path: '/projects/ChaosGame',
@@ -88,6 +94,7 @@ export interface FileRoutesByFullPath {
   '/now': typeof NowRoute
   '/projects/3d': typeof Projects3dRoute
   '/projects/ChaosGame': typeof ProjectsChaosGameRoute
+  '/projects/IASA': typeof ProjectsIASARoute
   '/projects/IECD': typeof ProjectsIECDRoute
   '/projects/RoPaSc': typeof ProjectsRoPaScRoute
   '/projects/VetCare': typeof ProjectsVetCareRoute
@@ -102,6 +109,7 @@ export interface FileRoutesByTo {
   '/now': typeof NowRoute
   '/projects/3d': typeof Projects3dRoute
   '/projects/ChaosGame': typeof ProjectsChaosGameRoute
+  '/projects/IASA': typeof ProjectsIASARoute
   '/projects/IECD': typeof ProjectsIECDRoute
   '/projects/RoPaSc': typeof ProjectsRoPaScRoute
   '/projects/VetCare': typeof ProjectsVetCareRoute
@@ -117,6 +125,7 @@ export interface FileRoutesById {
   '/now': typeof NowRoute
   '/projects/3d': typeof Projects3dRoute
   '/projects/ChaosGame': typeof ProjectsChaosGameRoute
+  '/projects/IASA': typeof ProjectsIASARoute
   '/projects/IECD': typeof ProjectsIECDRoute
   '/projects/RoPaSc': typeof ProjectsRoPaScRoute
   '/projects/VetCare': typeof ProjectsVetCareRoute
@@ -133,6 +142,7 @@ export interface FileRouteTypes {
     | '/now'
     | '/projects/3d'
     | '/projects/ChaosGame'
+    | '/projects/IASA'
     | '/projects/IECD'
     | '/projects/RoPaSc'
     | '/projects/VetCare'
@@ -147,6 +157,7 @@ export interface FileRouteTypes {
     | '/now'
     | '/projects/3d'
     | '/projects/ChaosGame'
+    | '/projects/IASA'
     | '/projects/IECD'
     | '/projects/RoPaSc'
     | '/projects/VetCare'
@@ -161,6 +172,7 @@ export interface FileRouteTypes {
     | '/now'
     | '/projects/3d'
     | '/projects/ChaosGame'
+    | '/projects/IASA'
     | '/projects/IECD'
     | '/projects/RoPaSc'
     | '/projects/VetCare'
@@ -176,6 +188,7 @@ export interface RootRouteChildren {
   NowRoute: typeof NowRoute
   Projects3dRoute: typeof Projects3dRoute
   ProjectsChaosGameRoute: typeof ProjectsChaosGameRoute
+  ProjectsIASARoute: typeof ProjectsIASARoute
   ProjectsIECDRoute: typeof ProjectsIECDRoute
   ProjectsRoPaScRoute: typeof ProjectsRoPaScRoute
   ProjectsVetCareRoute: typeof ProjectsVetCareRoute
@@ -258,6 +271,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ProjectsIECDRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/projects/IASA': {
+      id: '/projects/IASA'
+      path: '/projects/IASA'
+      fullPath: '/projects/IASA'
+      preLoaderRoute: typeof ProjectsIASARouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/projects/ChaosGame': {
       id: '/projects/ChaosGame'
       path: '/projects/ChaosGame'
@@ -280,6 +300,7 @@ const rootRouteChildren: RootRouteChildren = {
   NowRoute: NowRoute,
   Projects3dRoute: Projects3dRoute,
   ProjectsChaosGameRoute: ProjectsChaosGameRoute,
+  ProjectsIASARoute: ProjectsIASARoute,
   ProjectsIECDRoute: ProjectsIECDRoute,
   ProjectsRoPaScRoute: ProjectsRoPaScRoute,
   ProjectsVetCareRoute: ProjectsVetCareRoute,
