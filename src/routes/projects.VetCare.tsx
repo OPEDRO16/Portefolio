@@ -67,7 +67,7 @@ function VetCarePage() {
             <ul className="space-y-2 text-foreground">
               <li>Pedro Marques</li>
               <li>Pedro Grilo</li>
-              <li>Gianni Fiordida</li>
+              <li>Gianni Floriddia</li>
             </ul>
           </div>
         </div>

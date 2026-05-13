@@ -39,7 +39,7 @@ function RoPaScPage() {
             <p className="mono uppercase tracking-[0.25em] text-xs mb-3">Project made by</p>
             <ul className="space-y-2 text-foreground">
               <li>Pedro Marques</li>
-              <li>Gianni Fiordida</li>
+              <li>Gianni Floriddia</li>
             </ul>
             <div className="mt-6 rounded-3xl border border-border bg-background/50 p-4">
               <p className="mono uppercase tracking-[0.25em] text-[11px] mb-3">NEW</p>

@@ -43,7 +43,7 @@ function ChaosGamePage() {
           <div className="w-full lg:w-[28%] rounded-3xl border border-border bg-foreground/5 p-5 text-sm text-muted-foreground">
             <p className="mono uppercase tracking-[0.25em] text-xs mb-3">Project made by</p>
             <ul className="space-y-2 text-foreground">
-              <li>Gianni Fiordida</li>
+              <li>Gianni Floriddia</li>
               <li>Pedro Marques</li>
             </ul>
             <div className="mt-6 rounded-3xl border border-border bg-background/50 p-4">

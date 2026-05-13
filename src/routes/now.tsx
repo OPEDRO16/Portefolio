@@ -46,10 +46,10 @@ function NowPage() {
         {/* Media gallery — placeholders, swap for real images/videos */}
         <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-4">
           <div className="aspect-video bg-foreground/5 border border-border flex items-center justify-center text-muted-foreground mono text-[11px] uppercase tracking-[0.25em]">
-            <img src="/Images/Astra1.png" alt="Screenshot 01" className="w-full h-full object-cover" />
+            <img src="/Images/Astra1.webp" alt="Screenshot 01" className="w-full h-full object-cover" />
           </div>
           <div className="aspect-video bg-foreground/5 border border-border flex items-center justify-center text-muted-foreground mono text-[11px] uppercase tracking-[0.25em]">
-            <img src="/Images/Astra2.png" alt="Screenshot 02" className="w-full h-full object-cover" />
+            <img src="/Images/Astra2.webp" alt="Screenshot 02" className="w-full h-full object-cover" />
           </div>
         </div>
 
