@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import { Link } from "@tanstack/react-router";
 import { ArrowUpRight, MapPin, Sparkles, Hammer } from "lucide-react";
@@ -43,6 +44,13 @@ const nowItems = [
 ];
 
 function Index() {
+  const [notification, setNotification] = useState<{ message: string; type: "success" | "error" } | null>(null);
+
+  const showNotification = (message: string, type: "success" | "error") => {
+    setNotification({ message, type });
+    setTimeout(() => setNotification(null), 3000);
+  };
+
   return (
     <PageShell>
       <section className="grid grid-cols-1 lg:grid-cols-3 gap-5">
@@ -184,13 +192,11 @@ function Index() {
             </p>
           </div>
           <p className="mt-6 mono text-xs uppercase tracking-[0.2em] text-muted-foreground">
-            Contact me via the form or through social media.
+            Contact me!
           </p>
         </div>
 
         <div className="surface-card p-6 md:p-8">
-          <h2 className="mono text-xs uppercase tracking-[0.3em] mb-1">Say hi</h2>
-          <p className="text-xs text-muted-foreground mb-5">Your email will remain private.</p>
           <form
             className="flex flex-col gap-3"
             onSubmit={async (e) => {
@@ -210,13 +216,13 @@ function Index() {
                 const result = await response.json();
 
                 if (result.success) {
-                  alert("Message sent successfully!");
+                  showNotification("Message sent successfully!", "success");
                   f.reset();
                 } else {
-                  alert("Error: " + result.message);
+                  showNotification("Error: " + result.message, "error");
                 }
               } catch (error) {
-                alert("Failed to send message. Please try again later.");
+                showNotification("Failed to send message. Please try again later.", "error");
               }
             }}
           >
@@ -246,6 +252,17 @@ function Index() {
           </form>
         </div>
       </section>
+
+      {/* Notification Toast */}
+      {notification && (
+        <div
+          className={`fixed bottom-6 right-6 md:bottom-10 md:right-10 px-5 py-4 rounded-2xl shadow-xl z-50 mono text-xs uppercase tracking-widest text-white transition-all duration-300 animate-in fade-in slide-in-from-bottom-4 ${
+            notification.type === "success" ? "bg-green-600" : "bg-red-600"
+          }`}
+        >
+          {notification.message}
+        </div>
+      )}
     </PageShell>
   );
 }
