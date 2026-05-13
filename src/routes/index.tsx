@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Link } from "@tanstack/react-router";
-import { ArrowUpRight, MapPin, Sparkles, Headphones, BookOpen, Hammer } from "lucide-react";
+import { ArrowUpRight, MapPin, Sparkles, Hammer } from "lucide-react";
 import { PageShell } from "@/components/portfolio/PageShell";
 
 export const Route = createFileRoute("/")({
@@ -15,7 +15,6 @@ const categories = [
   { label: "Design", to: "/projects/design" as const, blurb: "UI, branding & illustration" },
 ];
 
-// slug = simple-icons slug. https://simpleicons.org
 const skills: { name: string; slug?: string; customIcon?: React.ReactNode }[] = [
   { name: "Java", slug: "openjdk" },
   { name: "Python", slug: "python" },
@@ -145,32 +144,29 @@ function Index() {
                 className="inline-flex items-center gap-3 whitespace-nowrap"
                 title={s.name}
               >
-            {s.customIcon ? (
-              <div className="h-8 w-8 md:h-10 md:w-10 flex items-center justify-center text-foreground">
-                {s.customIcon}
-              </div>
-            ) : s.slug ? (
-              <img
-                src={`https://cdn.simpleicons.org/${s.slug}/000000`}
-                alt={s.name}
-                width={40}
-                height={40}
-                className="h-8 w-8 md:h-10 md:w-10 object-contain"
-                loading="lazy"
-                onError={(e) => {
-                  const t = e.currentTarget;
-                  if (!t.dataset.localFallback) {
-                    t.dataset.localFallback = "true";
-                    // Tenta ir buscar o ficheiro com o nome do slug à pasta local (ex: public/Icons/milanote.svg)
-                    t.src = `/Icons/${s.slug}.svg`;
-                  } else {
-                    t.style.display = "none";
-                    t.nextElementSibling?.classList.remove("hidden");
-                  }
-                }}
-              />
-            ) : null}
-                <span className="hidden display text-2xl md:text-3xl">{s.name}</span>
+                {s.customIcon ? (
+                  <div className="h-8 w-8 md:h-10 md:w-10 flex items-center justify-center text-foreground">
+                    {s.customIcon}
+                  </div>
+                ) : s.slug ? (
+                  <img
+                    src={`https://cdn.simpleicons.org/${s.slug}/000000`}
+                    alt={s.name}
+                    width={40}
+                    height={40}
+                    className="h-8 w-8 md:h-10 md:w-10 object-contain"
+                    loading="lazy"
+                    onError={(e) => {
+                      const t = e.currentTarget;
+                      if (!t.dataset.localFallback) {
+                        t.dataset.localFallback = "true";
+                        t.src = `/Icons/${s.slug}.svg`;
+                      } else {
+                        t.style.display = "none";
+                      }
+                    }}
+                  />
+                ) : null}
                 <span className="text-muted-foreground/50 text-2xl">·</span>
               </span>
             ))}
@@ -178,7 +174,7 @@ function Index() {
         </div>
       </section>
 
-      {/* Contact */}
+      {/* Contact Section with Web3Forms */}
       <section className="grid grid-cols-1 lg:grid-cols-3 gap-5">
         <div className="surface-card lg:col-span-2 p-6 md:p-10 flex flex-col justify-between">
           <div>
@@ -188,24 +184,45 @@ function Index() {
             </p>
           </div>
           <p className="mt-6 mono text-xs uppercase tracking-[0.2em] text-muted-foreground">
-            pepedromarques007@gmail.com
+            Contact me via the form or through social media.
           </p>
         </div>
 
         <div className="surface-card p-6 md:p-8">
           <h2 className="mono text-xs uppercase tracking-[0.3em] mb-1">Say hi</h2>
-          <p className="text-xs text-muted-foreground mb-5"></p>
+          <p className="text-xs text-muted-foreground mb-5">Your email will remain private.</p>
           <form
             className="flex flex-col gap-3"
-            onSubmit={(e) => {
+            onSubmit={async (e) => {
               e.preventDefault();
               const f = e.currentTarget as HTMLFormElement;
-              const data = new FormData(f);
-              const subject = encodeURIComponent(`Hi from ${data.get("name") || "your site"}`);
-              const body = encodeURIComponent(String(data.get("message") || ""));
-              window.location.href = `mailto:pepedromarques007@gmail.com?subject=${subject}&body=${body}`;
+              const formData = new FormData(f);
+              
+              // ADICIONA A TUA CHAVE AQUI
+              formData.append("access_key", "579b95c5-99c7-4c53-a8e5-edaf0559bd62");
+
+              try {
+                const response = await fetch("https://api.web3forms.com/submit", {
+                  method: "POST",
+                  body: formData
+                });
+
+                const result = await response.json();
+
+                if (result.success) {
+                  alert("Message sent successfully!");
+                  f.reset();
+                } else {
+                  alert("Error: " + result.message);
+                }
+              } catch (error) {
+                alert("Failed to send message. Please try again later.");
+              }
             }}
           >
+            {/* Honeypot para evitar spam */}
+            <input type="checkbox" name="botcheck" className="hidden" style={{ display: 'none' }} />
+
             <label className="flex flex-col gap-1 text-xs">
               <span className="mono uppercase tracking-[0.2em] text-muted-foreground">Name *</span>
               <input required name="name" placeholder="Your name"
