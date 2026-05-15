@@ -22,8 +22,9 @@ export const Route = createFileRoute("/projects/python")({
           tags: ["Python", "Java", "AI", "Agents"],
         },
         {
-          title: "Automation Script",
-          description: "A small utility that automates a repetitive task. Replace with your real work.",
+          title: "Image Processing & Analysis",
+          description: "Academic project in Python about image analysis, compression, color spaces and quality assessment.",
+          link: "/projects/ImageProcessing",
           tags: ["Python", "CLI"],
         },
       ]}
