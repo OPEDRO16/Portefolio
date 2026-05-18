@@ -16,11 +16,6 @@ export const Route = createFileRoute("/projects/web")({
       subtitle="Front-end and full-stack web work — modern stacks, clean interfaces."
       projects={[
         {
-          title: "This Portfolio",
-          description: "A minimal portfolio inspired by a friend's site, rebuilt with my own twist.",
-          tags: ["React", "TypeScript", "TanStack"],
-        },
-        {
           title: "Gobang / Five in a Row",
           description: "A game in Java with a client-server architecture, user authentication, real-time communication via sockets, and player data persistence in XML.",
           link: "/projects/IECD",
@@ -43,6 +38,11 @@ export const Route = createFileRoute("/projects/web")({
           description: "A modified version of the classic Blackjack card game developed as part of a Multimedia Authoring course.",
           link: "/projects/BlackJach",
           tags: ["JavaScript"],
+        },
+        {
+          title: "This Portfolio",
+          description: "A minimal portfolio inspired by a friend's site, rebuilt with my own twist.",
+          tags: ["React", "TypeScript", "TanStack"],
         }
       ]}
     />
