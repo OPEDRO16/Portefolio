@@ -27,6 +27,18 @@ export const Route = createFileRoute("/projects/python")({
           link: "/projects/ImageProcessing",
           tags: ["Python", "CLI"],
         },
+        {
+          title: "Lego Recognition",
+          description: "Computer vision project focused on detecting, counting and classifying rectangular Lego bricks from images with a bluebackground.",
+          link: "/projects/LegoRecognition",
+          tags: ["Python", "Computer Vision", "Classification"],
+        },
+        {
+          title: "IMDb Movie Reviews Sentiment Analysis",
+          description: "Sentiment analysis project in Python using machine learning to classify movie reviews as positive or negative based on their text content.",
+          link: "/projects/imdb",
+          tags: ["JavaScript", "HTML", "CSS"],
+        }
       ]}
     />
   ),

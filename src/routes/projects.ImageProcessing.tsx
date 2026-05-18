@@ -1,14 +1,34 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageShell } from "@/components/portfolio/PageShell";
-import { Sparkles, ArrowRight, BookOpen, Cpu, Layers, Eye, Activity, Hammer, CheckCircle2, Github, LayoutGrid, Image as ImageIcon, Code, BarChart3 } from "lucide-react";
+import {
+  Sparkles,
+  ArrowRight,
+  BookOpen,
+  Layers,
+  Activity,
+  CheckCircle2,
+  Github,
+  Shield,
+} from "lucide-react";
 
 export const Route = createFileRoute("/projects/ImageProcessing")({
   head: () => ({
     meta: [
       { title: "Image Processing & Analysis — Pedro Marques" },
-      { name: "description", content: "Academic project in Python about image analysis, compression, color spaces and quality assessment." },
-      { property: "og:title", content: "Image Processing & Analysis — Pedro Marques" },
-      { property: "og:description", content: "Academic project in Python about image analysis, compression, color spaces and quality assessment." },
+      {
+        name: "description",
+        content:
+          "Academic Python project exploring image analysis, compression, bit planes, dithering, binary representation and error control.",
+      },
+      {
+        property: "og:title",
+        content: "Image Processing & Analysis — Pedro Marques",
+      },
+      {
+        property: "og:description",
+        content:
+          "Academic Python project exploring image analysis, compression, bit planes, dithering, binary representation and error control.",
+      },
     ],
   }),
   component: ImageProcessingPage,
@@ -17,185 +37,450 @@ export const Route = createFileRoute("/projects/ImageProcessing")({
 function ImageProcessingPage() {
   return (
     <PageShell showBack backTo="/projects/python">
-      {/* 1. Hero section */}
+      {/* Hero */}
       <section className="surface-card p-6 md:p-10">
         <div className="flex flex-col gap-6 lg:flex-row lg:items-start lg:justify-between mb-10">
           <div className="max-w-3xl">
             <p className="mono text-[11px] uppercase tracking-[0.25em] text-muted-foreground mb-3 flex items-center gap-2">
               <Sparkles className="h-3 w-3" /> Academic Project
             </p>
-            <h1 className="display text-5xl md:text-6xl">Image Processing & Analysis</h1>
+
+            <h1 className="display text-5xl md:text-6xl">
+              Image Processing & Analysis
+            </h1>
+
             <p className="mt-5 text-xl font-medium text-foreground max-w-2xl leading-relaxed">
-              Academic project in Python focusing on multimedia processing and image analysis.
+              Academic project in Python focused on practical experiments in
+              image representation, compression, binary processing and error
+              control.
             </p>
+
             <p className="mt-5 text-muted-foreground max-w-2xl leading-relaxed">
-              This project explored various image processing and analysis techniques in Python, including image transformation and representation, compression, color space conversion, error control, and quality metrics evaluation. The goal was to apply fundamental multimedia processing concepts in practical and comparative experiments.
+              This project explored key concepts in multimedia and information
+              processing through a set of applied image-processing exercises.
+              The work covered image properties, grayscale conversion,
+              histograms, JPEG compression, SNR and PSNR evaluation, bit-plane
+              analysis, Floyd–Steinberg dithering, binary representation and
+              error-control experiments in noisy channels.
             </p>
+
             <div className="mt-6 flex flex-wrap gap-3">
               <span className="chip">Python</span>
+              <span className="chip">NumPy</span>
+              <span className="chip">OpenCV</span>
+              <span className="chip">Matplotlib</span>
               <span className="chip">Image Processing</span>
               <span className="chip">Compression</span>
-              <span className="chip">Color Spaces</span>
-              <span className="chip">Quality Metrics</span>
+              <span className="chip">Error Control</span>
             </div>
           </div>
 
           <div className="w-full lg:w-[28%] rounded-3xl border border-border bg-foreground/5 p-5 text-sm text-muted-foreground">
-            <p className="mono uppercase tracking-[0.25em] text-xs mb-3">Project Details</p>
+            <p className="mono uppercase tracking-[0.25em] text-xs mb-3">
+              Project Details
+            </p>
             <ul className="space-y-3 text-foreground">
               <li className="flex flex-col gap-1">
-                <span className="text-muted-foreground text-[11px] uppercase tracking-wider">Type</span>
+                <span className="text-muted-foreground text-[11px] uppercase tracking-wider">
+                  Type
+                </span>
                 <span>Academic Project</span>
               </li>
               <li className="flex flex-col gap-1">
-                <span className="text-muted-foreground text-[11px] uppercase tracking-wider">Area</span>
-                <span>Image Processing</span>
+                <span className="text-muted-foreground text-[11px] uppercase tracking-wider">
+                  Area
+                </span>
+                <span>Image Processing & Analysis</span>
               </li>
               <li className="flex flex-col gap-1">
-                <span className="text-muted-foreground text-[11px] uppercase tracking-wider">Focus</span>
-                <span>Image analysis, compression, color spaces, error control, quality metrics</span>
+                <span className="text-muted-foreground text-[11px] uppercase tracking-wider">
+                  Developed By
+                </span>
+                <span>Pedro Marques & Gianni Floriddia</span>
               </li>
             </ul>
           </div>
         </div>
-        
-        <div className="w-full aspect-[21/9] rounded-3xl border border-border bg-foreground/5 flex flex-col items-center justify-center text-muted-foreground text-center p-4 overflow-hidden relative">
-          <span className="italic text-sm">[Insert Image Processing Main Overview Image]</span>
-          <p className="absolute bottom-4 right-6 text-[10px] uppercase tracking-widest bg-background/80 px-3 py-1 rounded-full backdrop-blur-sm">Project Overview</p>
-        </div>
       </section>
 
-      {/* 2. Context & 3. Overview */}
-      <section className="surface-card p-6 md:p-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
-          <div className="flex flex-col gap-4">
-            <div className="flex items-baseline justify-between mb-2">
-              <h2 className="mono text-xs uppercase tracking-[0.3em] flex items-center gap-2">
-                <BookOpen className="h-3.5 w-3.5" /> Context
-              </h2>
-            </div>
-            <p className="text-muted-foreground leading-relaxed">
-              This project was developed in an academic context with the goal of exploring fundamental multimedia processing techniques through practical experiments in Python. The work focused on image representation, transformation, encoding, and evaluation, allowing the analysis of how different methods affect visual quality and information efficiency.
-            </p>
-          </div>
-
-          <div className="flex flex-col gap-4">
-            <div className="flex items-baseline justify-between mb-2">
-              <h2 className="mono text-xs uppercase tracking-[0.3em] flex items-center gap-2">
-                <Eye className="h-3.5 w-3.5" /> Overview
-              </h2>
-            </div>
-            <p className="text-muted-foreground leading-relaxed">
-              The project is presented as an applied study of image processing and analysis, articulating image operations with compression methods, color transformation, robustness mechanisms, and quantitative evaluation. The focus is on both the technical component and the ability to compare results and interpret the impact of each approach.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* 4. Project Components */}
+      {/* Scope */}
       <section className="surface-card p-6 md:p-10">
         <div className="flex items-baseline justify-between mb-6">
-          <div>
-            <h2 className="mono text-xs uppercase tracking-[0.3em] flex items-center gap-2">
-              <Layers className="h-3.5 w-3.5" /> Project Components
-            </h2>
+          <h2 className="mono text-xs uppercase tracking-[0.3em] flex items-center gap-2">
+            <BookOpen className="h-3.5 w-3.5" /> Project Scope
+          </h2>
+        </div>
+
+        <p className="text-muted-foreground leading-relaxed max-w-4xl mb-8">
+          The notebook explores several key concepts in multimedia and
+          information processing. The work is structured around three main
+          areas: image-processing fundamentals, image compression techniques,
+          and error-control coding applied to visual data.
+        </p>
+
+        <div className="grid gap-4 md:grid-cols-3">
+          <div className="rounded-3xl border border-border bg-foreground/5 p-6">
+            <h3 className="text-lg font-medium text-foreground mb-3">
+              Fundamentals
+            </h3>
+            <p className="text-sm text-muted-foreground leading-relaxed">
+              Understanding image properties with dtype and shape, grayscale
+              conversion, histograms and bit-plane representation.
+            </p>
           </div>
+
+          <div className="rounded-3xl border border-border bg-foreground/5 p-6">
+            <h3 className="text-lg font-medium text-foreground mb-3">
+              Compression
+            </h3>
+            <p className="text-sm text-muted-foreground leading-relaxed">
+              JPEG compression with different quality levels, compression rate
+              comparison and binary image representation with dithering.
+            </p>
+          </div>
+
+          <div className="rounded-3xl border border-border bg-foreground/5 p-6">
+            <h3 className="text-lg font-medium text-foreground mb-3">
+              Error Control
+            </h3>
+            <p className="text-sm text-muted-foreground leading-relaxed">
+              Binary image conversion, noisy-channel simulation, BER evaluation
+              and repetition-based error correction for more reliable image
+              transmission.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Main Experiments */}
+      <section className="surface-card p-6 md:p-10">
+        <div className="flex items-baseline justify-between mb-8">
+          <h2 className="mono text-xs uppercase tracking-[0.3em] flex items-center gap-2">
+            <Layers className="h-3.5 w-3.5" /> Main Experiments
+          </h2>
         </div>
 
         <div className="space-y-12">
-          {/* 4.1 Image Analysis */}
           <div className="flex flex-col lg:flex-row lg:items-start gap-8">
             <div className="flex-1">
-              <h3 className="text-xl font-medium text-foreground mb-4">Image Analysis</h3>
+              <h3 className="text-xl font-medium text-foreground mb-4">
+                Grayscale Conversion
+              </h3>
               <p className="text-muted-foreground leading-relaxed max-w-3xl">
-                A significant part of the work focused on observing and manipulating image properties, exploring ways to represent, transform, and analyze visual information in a computational context.
+                One of the first transformations in the project was the
+                conversion of the RGB image to grayscale. This created the basis
+                for later histogram analysis, bit-plane decomposition and binary
+                processing experiments.
               </p>
             </div>
-            <div className="w-full lg:w-[45%] shrink-0 aspect-[4/3] rounded-3xl border border-border bg-foreground/5 flex flex-col items-center justify-center text-muted-foreground text-center p-4">
-              <span className="italic text-sm mb-4">[Insert Image Analysis Representation]</span>
-              <p className="text-xs">Visual Representation</p>
+            <div className="w-full lg:w-[44%] rounded-3xl border border-border bg-foreground/5 flex flex-col items-center justify-center p-4">
+              <img
+                loading="lazy"
+                decoding="async"
+                src="/Images/LenaGray.webp"
+                alt="Grayscale conversion used for histogram and bit-plane analysis"
+                className="w-3/4 rounded-2xl h-auto mb-3"
+              />
+              <p className="text-xs text-center text-muted-foreground">
+                Grayscale conversion used for later analysis
+              </p>
             </div>
           </div>
 
-          {/* 4.2 Compression */}
           <div className="flex flex-col lg:flex-row lg:items-start gap-8">
-            <div className="w-full lg:w-[45%] shrink-0 aspect-[4/3] rounded-3xl border border-border bg-foreground/5 flex flex-col items-center justify-center text-muted-foreground text-center p-4 order-2 lg:order-1">
-              <span className="italic text-sm mb-4">[Insert Compression Representation]</span>
-              <p className="text-xs">Data Compression</p>
+            <div className="w-full lg:w-[44%] rounded-3xl border border-border bg-foreground/5 flex flex-col items-center justify-center p-4 order-2 lg:order-1">
+              <img
+                loading="lazy"
+                decoding="async"
+                src="/Images/HistLena.webp"
+                alt="Histogram of the grayscale image showing intensity distribution"
+                className="w-full rounded-2xl h-auto mb-3"
+              />
+              <p className="text-xs text-center text-muted-foreground">
+                Histogram used to inspect grayscale intensity distribution
+              </p>
             </div>
             <div className="flex-1 order-1 lg:order-2">
-              <h3 className="text-xl font-medium text-foreground mb-4">Compression</h3>
+              <h3 className="text-xl font-medium text-foreground mb-4">
+                Histogram Analysis
+              </h3>
               <p className="text-muted-foreground leading-relaxed max-w-3xl">
-                The project included experiments related to image compression, analyzing the relationship between information reduction, storage efficiency, and the impact on the final visual quality.
+                The grayscale image histogram was used to inspect the
+                distribution of intensity values and count the effective gray
+                levels present in the image. This gave a clearer understanding
+                of tonal structure before moving to binary and compressed
+                representations.
               </p>
             </div>
           </div>
 
-          {/* 4.3 Color Space Conversion */}
           <div className="flex flex-col lg:flex-row lg:items-start gap-8">
             <div className="flex-1">
-              <h3 className="text-xl font-medium text-foreground mb-4">Color Space Conversion</h3>
+              <h3 className="text-xl font-medium text-foreground mb-4">
+                Bit-Plane Decomposition
+              </h3>
               <p className="text-muted-foreground leading-relaxed max-w-3xl">
-                Another important aspect was the conversion between different color spaces, allowing the study of how chromatic representation influences processing, visualization, and the efficiency of certain operations.
+                The project decomposed the grayscale image into eight bit
+                planes, showing how visual information is distributed across
+                bits. This makes it easy to observe which planes carry fine
+                noise and which preserve the most relevant structure of the
+                image.
               </p>
             </div>
-            <div className="w-full lg:w-[45%] shrink-0 aspect-[4/3] rounded-3xl border border-border bg-foreground/5 flex flex-col items-center justify-center text-muted-foreground text-center p-4">
-              <span className="italic text-sm mb-4">[Insert Color Space Conversion Representation]</span>
-              <p className="text-xs">Color Models</p>
+            <div className="w-full lg:w-[44%] rounded-3xl border border-border bg-foreground/5 flex flex-col items-center justify-center p-4">
+              <img
+                loading="lazy"
+                decoding="async"
+                src="/Images/BitPlanes.webp"
+                alt="Bit-plane decomposition illustrating how image information is distributed across bits"
+                className="w-full rounded-2xl h-auto mb-3"
+              />
+              <p className="text-xs text-center text-muted-foreground">
+                Eight bit planes extracted from the grayscale image
+              </p>
             </div>
           </div>
 
-          {/* 4.4 Error Control and Robustness */}
           <div className="flex flex-col lg:flex-row lg:items-start gap-8">
-            <div className="w-full lg:w-[45%] shrink-0 aspect-[4/3] rounded-3xl border border-border bg-foreground/5 flex flex-col items-center justify-center text-muted-foreground text-center p-4 order-2 lg:order-1">
-              <span className="italic text-sm mb-4">[Insert Error Control Representation]</span>
-              <p className="text-xs">Robustness & Encoding</p>
+            <div className="w-full lg:w-[44%] rounded-3xl border border-border bg-foreground/5 flex flex-col items-center justify-center p-4 order-2 lg:order-1">
+              <img
+                loading="lazy"
+                decoding="async"
+                src="/Images/DitherLena.webp"
+                alt="Floyd–Steinberg dithering result for binary image representation"
+                className="w-3/4 rounded-2xl h-auto mb-3"
+              />
+              <p className="text-xs text-center text-muted-foreground">
+                Floyd–Steinberg dithering for binary representation
+              </p>
             </div>
             <div className="flex-1 order-1 lg:order-2">
-              <h3 className="text-xl font-medium text-foreground mb-4">Error Control and Robustness</h3>
+              <h3 className="text-xl font-medium text-foreground mb-4">
+                Compression & Dithering
+              </h3>
               <p className="text-muted-foreground leading-relaxed max-w-3xl">
-                The work also addressed error control mechanisms and information reliability, exploring how encoding techniques can contribute to making the transmission or storage of visual data more robust.
+                Compression was explored through JPEG quality comparison,
+                compression-rate measurement and quality assessment using SNR
+                and PSNR. The notebook also implemented Floyd–Steinberg
+                dithering to create a binary approximation of the image and
+                evaluate how much visual structure can be preserved with only 1
+                bit per pixel.
               </p>
             </div>
           </div>
 
-          {/* 4.5 Quality Evaluation */}
           <div className="flex flex-col lg:flex-row lg:items-start gap-8">
             <div className="flex-1">
-              <h3 className="text-xl font-medium text-foreground mb-4">Quality Evaluation</h3>
+              <h3 className="text-xl font-medium text-foreground mb-4">
+                Generated Pattern
+              </h3>
               <p className="text-muted-foreground leading-relaxed max-w-3xl">
-                The results were analyzed using quality metrics, allowing for the comparison of approaches and a more objective understanding of the visual and technical impact of the applied transformations.
+                Beyond processing existing images, the project also included
+                synthetic image generation. A radial black-and-white pattern was
+                created from angular sectors, showing how mathematical
+                structure can be translated into an image matrix.
               </p>
             </div>
-            <div className="w-full lg:w-[45%] shrink-0 aspect-[4/3] rounded-3xl border border-border bg-foreground/5 flex flex-col items-center justify-center text-muted-foreground text-center p-4">
-              <span className="italic text-sm mb-4">[Insert Quality Evaluation Representation]</span>
-              <p className="text-xs">Metrics Assessment</p>
+            <div className="w-full lg:w-[44%] rounded-3xl border border-border bg-foreground/5 flex flex-col items-center justify-center p-4">
+              <img
+                loading="lazy"
+                decoding="async"
+                src="/Images/Pattern.webp"
+                alt="Generated binary radial pattern created from angular sectors"
+                className="w-full rounded-2xl h-auto mb-3"
+              />
+              <p className="text-xs text-center text-muted-foreground">
+                Radial binary pattern generated algorithmically
+              </p>
+            </div>
+          </div>
+
+          <div className="flex flex-col lg:flex-row lg:items-start gap-8">
+            <div className="w-full lg:w-[44%] rounded-3xl border border-border bg-foreground/5 flex flex-col items-center justify-center p-4 order-2 lg:order-1">
+              <img
+                loading="lazy"
+                decoding="async"
+                src="/Images/DilbertGray.webp"
+                alt="Control image used for binary conversion, histogram analysis and noisy channel experiments"
+                className="w-full rounded-2xl h-auto mb-3"
+              />
+              <p className="text-xs text-center text-muted-foreground">
+                Control image used for binary conversion and error-control analysis
+              </p>
+            </div>
+
+            <div className="flex-1 order-1 lg:order-2">
+              <h3 className="text-xl font-medium text-foreground mb-4">
+                Error Control Experiments
+              </h3>
+              <p className="text-muted-foreground leading-relaxed max-w-3xl">
+                The final part of the project focused on error control in binary
+                image transmission. After analysing the control image and
+                converting it into a binary representation, the work simulated
+                noisy channels by randomly flipping bits with different
+                probabilities and measured the resulting BER (Bit Error Rate).
+                To improve robustness, repetition-based error-correction
+                schemes were tested with multiple redundancy levels, showing
+                that increasing the number of copies per bit significantly
+                improves the recovered image quality.
+              </p>
+
+              <div className="mt-6 grid gap-4 md:grid-cols-2">
+                <div className="rounded-3xl border border-border bg-foreground/5 p-5">
+                  <h4 className="text-sm font-medium text-foreground mb-2">
+                    Noisy Channel Simulation
+                  </h4>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    The binary control image was transmitted through simulated
+                    noisy channels with different bit-flip probabilities,
+                    allowing the comparison between visual degradation and BER
+                    growth.
+                  </p>
+                </div>
+
+                <div className="rounded-3xl border border-border bg-foreground/5 p-5">
+                  <h4 className="text-sm font-medium text-foreground mb-2">
+                    Repetition Codes
+                  </h4>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    Repetition coding was used as a simple error-control
+                    strategy. Different redundancy values were tested and
+                    decoded by majority vote, showing that larger N values lead
+                    to more reliable image recovery.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* 5. Technical Approach */}
+      {/* Error Control Results */}
       <section className="surface-card p-6 md:p-10">
         <div className="flex items-baseline justify-between mb-6">
-          <div>
-            <h2 className="mono text-xs uppercase tracking-[0.3em] flex items-center gap-2">
-              <Activity className="h-3.5 w-3.5" /> Technical Approach
-            </h2>
+          <h2 className="mono text-xs uppercase tracking-[0.3em] flex items-center gap-2">
+            <Shield className="h-3.5 w-3.5" /> Error Control Results
+          </h2>
+        </div>
+
+        <p className="text-muted-foreground leading-relaxed max-w-3xl mb-8">
+          The error-control section combined histogram-based binary conversion,
+          noisy-channel simulation and simple coding strategies to study image
+          transmission reliability. The experiments showed that BER increases
+          with the probability of bit flipping, while repetition codes improve
+          the quality of the recovered image as redundancy increases.
+        </p>
+
+        <div className="grid gap-8">
+          <div className="flex flex-col lg:flex-row lg:items-start gap-8">
+            <div className="w-full lg:w-[44%] rounded-3xl border border-border bg-foreground/5 flex flex-col items-center justify-center p-4">
+              <img
+                loading="lazy"
+                decoding="async"
+                src="/Images/Ruido1.webp"
+                alt="Grid of binary control images degraded with different noisy channel probabilities"
+                className="w-full rounded-2xl h-auto mb-3"
+              />
+              <p className="text-xs text-center text-muted-foreground">
+                Visual comparison of noisy-channel outputs for different bit-flip probabilities
+              </p>
+            </div>
+
+            <div className="flex-1">
+              <h3 className="text-xl font-medium text-foreground mb-4">
+                BER Under Noise
+              </h3>
+              <p className="text-muted-foreground leading-relaxed max-w-3xl mb-5">
+                A noisy binary channel was simulated by flipping image bits with
+                predefined probabilities. The resulting BER values closely
+                followed the probability of flipping, confirming the expected
+                relationship between channel noise and transmission error.
+              </p>
+
+              <div className="grid gap-3 sm:grid-cols-2">
+                <div className="rounded-3xl border border-border bg-foreground/5 p-4">
+                  <p className="text-sm text-foreground">
+                    BER grows as the bit-flip probability increases.
+                  </p>
+                </div>
+                <div className="rounded-3xl border border-border bg-foreground/5 p-4">
+                  <p className="text-sm text-foreground">
+                    Visual degradation becomes increasingly visible at higher noise levels.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="flex flex-col lg:flex-row lg:items-start gap-8">
+            <div className="flex-1 order-2 lg:order-1">
+              <h3 className="text-xl font-medium text-foreground mb-4">
+                Repetition-Based Recovery
+              </h3>
+              <p className="text-muted-foreground leading-relaxed max-w-3xl mb-5">
+                The project used repetition codes by duplicating each bit N
+                times and decoding the received groups using majority vote.
+                Testing several values of N showed that higher redundancy
+                greatly improves the recovered image, with the strongest result
+                in the notebook appearing for N = 61.
+              </p>
+
+              <div className="grid gap-3 sm:grid-cols-2">
+                <div className="rounded-3xl border border-border bg-foreground/5 p-4">
+                  <p className="text-sm text-foreground">
+                    Increasing redundancy improves robustness against noise.
+                  </p>
+                </div>
+                <div className="rounded-3xl border border-border bg-foreground/5 p-4">
+                  <p className="text-sm text-foreground">
+                    Majority-vote decoding restores much of the lost binary structure.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="w-full lg:w-[44%] rounded-3xl border border-border bg-foreground/5 flex flex-col items-center justify-center p-4 order-1 lg:order-2">
+              <img
+                loading="lazy"
+                decoding="async"
+                src="/Images/Ruido.webp"
+                alt="Comparison of decoded binary images using repetition codes with different redundancy values"
+                className="w-full rounded-2xl h-auto mb-3"
+              />
+              <p className="text-xs text-center text-muted-foreground">
+                Comparison of decoded images for different repetition-code sizes
+              </p>
+            </div>
           </div>
         </div>
+      </section>
+
+      {/* Metrics */}
+      <section className="surface-card p-6 md:p-10">
+        <div className="flex items-baseline justify-between mb-6">
+          <h2 className="mono text-xs uppercase tracking-[0.3em] flex items-center gap-2">
+            <Activity className="h-3.5 w-3.5" /> Metrics & Analysis
+          </h2>
+        </div>
+
         <p className="text-muted-foreground leading-relaxed max-w-3xl mb-8">
-          The project's approach combined practical implementation with comparative analysis. Instead of merely applying techniques directly, the work sought to observe the effects of each method on the image and interpret these effects based on quantitative and visual criteria.
+          The notebook did not rely only on visual inspection. Different
+          transformations, compression choices and transmission scenarios were
+          compared using quantitative indicators, helping relate perceptual
+          quality to signal degradation, storage efficiency and channel noise.
         </p>
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {[
-            "Image processing in Python",
-            "Comparative analysis of results",
-            "Visual representation manipulation",
-            "Information transformation and encoding",
-            "Evaluation by quality metrics"
+            "Compression rate comparison between JPEG outputs",
+            "Signal quality evaluation with SNR",
+            "Peak quality evaluation with PSNR",
+            "BER analysis for noisy binary transmission",
           ].map((item, idx) => (
-            <div key={idx} className="rounded-3xl border border-border bg-foreground/5 p-5 flex items-start gap-3">
+            <div
+              key={idx}
+              className="rounded-3xl border border-border bg-foreground/5 p-5 flex items-start gap-3"
+            >
               <CheckCircle2 className="h-4 w-4 shrink-0 text-muted-foreground mt-0.5" />
               <span className="text-sm text-foreground">{item}</span>
             </div>
@@ -203,120 +488,11 @@ function ImageProcessingPage() {
         </div>
       </section>
 
-      {/* 6. Learnings & 7. Tech */}
-      <section className="surface-card p-6 md:p-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
-          <div className="flex flex-col gap-4">
-            <div className="flex items-baseline justify-between mb-2">
-              <h2 className="mono text-xs uppercase tracking-[0.3em] flex items-center gap-2">
-                <BookOpen className="h-3.5 w-3.5" /> Learnings
-              </h2>
-            </div>
-            <p className="text-muted-foreground leading-relaxed">
-              This project allowed for the consolidation of knowledge in digital image processing, color representation, compression, and quality evaluation. It also reinforced the understanding of the connection between algorithmic transformation, visual perception, and quantitative analysis of results.
-            </p>
-          </div>
-
-          <div className="flex flex-col gap-4">
-            <div className="flex items-baseline justify-between mb-2">
-              <h2 className="mono text-xs uppercase tracking-[0.3em] flex items-center gap-2">
-                <Cpu className="h-3.5 w-3.5" /> Technologies & Skills
-              </h2>
-            </div>
-            <div className="flex flex-wrap gap-2">
-              {[
-                "Python", "Image Processing", "Compression", 
-                "Color Spaces", "Encoding", "Quality Evaluation", 
-                "Comparative Analysis", "Computational Experimentation"
-              ].map((tech) => (
-                <span key={tech} className="chip">{tech}</span>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 8. My Contribution */}
-      <section className="surface-card p-6 md:p-10">
-        <div className="flex items-baseline justify-between mb-6">
-          <div>
-            <h2 className="mono text-xs uppercase tracking-[0.3em] flex items-center gap-2">
-              <Hammer className="h-3.5 w-3.5" /> My Contribution
-            </h2>
-          </div>
-        </div>
-        <p className="text-muted-foreground leading-relaxed max-w-3xl mb-8">
-          On this page, the description of my contribution focuses on the components where I had the greatest technical involvement within the project. This section is structured so that I can easily replace the text with concrete contributions, such as implementing transformations, analyzing results, comparing metrics, image processing, or exploring specific techniques.
-        </p>
-        <div className="grid gap-6 md:grid-cols-3">
-          <div className="rounded-3xl border border-border bg-foreground/5 p-6">
-            <h3 className="font-medium text-foreground mb-2 flex items-center gap-2">
-              <Code className="h-4 w-4" /> [PLACEHOLDER CONTRIBUTION 1]
-            </h3>
-            <p className="text-sm text-muted-foreground">Describe your specific implementation details or algorithm choices here.</p>
-          </div>
-          <div className="rounded-3xl border border-border bg-foreground/5 p-6">
-            <h3 className="font-medium text-foreground mb-2 flex items-center gap-2">
-              <BarChart3 className="h-4 w-4" /> [PLACEHOLDER CONTRIBUTION 2]
-            </h3>
-            <p className="text-sm text-muted-foreground">Detail the analysis of results, comparison of metrics or testing procedures.</p>
-          </div>
-          <div className="rounded-3xl border border-border bg-foreground/5 p-6">
-            <h3 className="font-medium text-foreground mb-2 flex items-center gap-2">
-              <ImageIcon className="h-4 w-4" /> [PLACEHOLDER CONTRIBUTION 3]
-            </h3>
-            <p className="text-sm text-muted-foreground">Explain any advanced image manipulation, color mapping or error control handling.</p>
-          </div>
-        </div>
-      </section>
-
-      {/* 9. Final Result / Gallery */}
-      <section className="surface-card p-6 md:p-10">
-        <div className="flex items-baseline justify-between mb-6">
-          <div>
-            <h2 className="mono text-xs uppercase tracking-[0.3em] flex items-center gap-2">
-              <LayoutGrid className="h-3.5 w-3.5" /> Result
-            </h2>
-          </div>
-        </div>
-        <p className="text-muted-foreground leading-relaxed max-w-3xl mb-8">
-          This work demonstrated how different multimedia processing techniques can be applied, compared, and evaluated in a practical image analysis context. The page aims to convey a balanced combination of technical implementation, experimentation, and result interpretation.
-        </p>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          <div className="aspect-[4/3] rounded-3xl border border-border bg-foreground/5 flex flex-col items-center justify-center p-4">
-            <span className="italic text-sm text-muted-foreground">[Insert Result 1 Image]</span>
-          </div>
-          <div className="aspect-[4/3] rounded-3xl border border-border bg-foreground/5 flex flex-col items-center justify-center p-4">
-            <span className="italic text-sm text-muted-foreground">[Insert Result 2 Image]</span>
-          </div>
-          <div className="aspect-[4/3] rounded-3xl border border-border bg-foreground/5 flex flex-col items-center justify-center p-4">
-            <span className="italic text-sm text-muted-foreground">[Insert Result 3 Image]</span>
-          </div>
-        </div>
-      </section>
-
-      {/* Final Navigation */}
-      <section className="mt-16 mb-8 flex flex-col md:flex-row items-center justify-between gap-6 px-4">
-        <div className="flex gap-4">
-          <a
-            href="#"
-            target="_blank"
-            rel="noreferrer"
-            className="inline-flex items-center justify-center gap-2 rounded-full border border-border bg-background px-6 py-3 text-sm font-medium text-foreground shadow-sm transition-all hover:bg-foreground hover:text-background"
-            onClick={(e) => {
-              e.preventDefault();
-              window.open("#", "_blank"); // Add actual repository link here
-            }}
-          >
-            <Github className="h-4 w-4" />
-            View Repository
-          </a>
-        </div>
-        
-      <div className="flex flex-col items-center justify-center text-center">
-        <div 
+      {/* Navigation */}
+      <section className="mt-16 mb-8 flex flex-col items-center justify-center text-center">
+        <div
           className="group relative flex cursor-pointer flex-col items-center justify-center"
-          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
         >
           <div className="absolute inset-0 rounded-full bg-foreground/5 blur-xl opacity-0 transition-opacity duration-500 group-hover:opacity-100"></div>
           <button className="relative flex h-14 w-14 items-center justify-center rounded-full border border-border bg-background shadow-sm transition-all duration-500 ease-out group-hover:-translate-y-2 group-hover:shadow-md">
@@ -326,7 +502,6 @@ function ImageProcessingPage() {
             Back to top
           </p>
         </div>
-      </div>
       </section>
     </PageShell>
   );

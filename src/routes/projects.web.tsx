@@ -21,10 +21,29 @@ export const Route = createFileRoute("/projects/web")({
           tags: ["React", "TypeScript", "TanStack"],
         },
         {
-          title: "Side Project",
-          description: "Replace with a real project — a demo site, a SaaS prototype, an app.",
-          tags: ["Next.js", "Tailwind"],
+          title: "Gobang / Five in a Row",
+          description: "A game in Java with a client-server architecture, user authentication, real-time communication via sockets, and player data persistence in XML.",
+          link: "/projects/IECD",
+          tags: ["Java", "XML", "JSP"],
         },
+        {
+          title: "imageSearch",
+          description: "A veterinary management system for clinics made with MySQL, Java JSP/Servlet and Apache Tomcat.",
+          link: "/projects/imageSearch",
+          tags: ["Java", "MySQL", "JSP", "Apache Tomcat"],
+        },
+        {
+          title: "Vetcare",
+          description: "A veterinary management system for clinics made with MySQL, Java JSP/Servlet and Apache Tomcat.",
+          link: "/projects/VetCare",
+          tags: ["Java", "MySQL", "JSP", "Apache Tomcat"],
+        },
+        {
+          title: "BlackJack 25",
+          description: "A modified version of the classic Blackjack card game developed as part of a Multimedia Authoring course.",
+          link: "/projects/BlackJach",
+          tags: ["JavaScript"],
+        }
       ]}
     />
   ),
