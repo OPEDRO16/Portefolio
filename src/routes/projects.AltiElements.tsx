@@ -43,12 +43,14 @@ function AltiElements() {
               <li>Pedro Marques</li>
             </ul>
             <div className="mt-6 rounded-3xl border border-border bg-background/50 p-4">
-              <p className="mono uppercase tracking-[0.25em] text-[11px] mb-3">NEW</p>
+              <p className="mono uppercase tracking-[0.25em] text-[11px] mb-3">Download</p>
               <a
-                href="/Downloads/AltiElements.apk"
+                href="https://github.com/OPEDRO16/AltiElementsAPK"
+                target="_blank"
+                rel="noreferrer"
                 className="text-sm text-foreground underline underline-offset-4 hover:text-foreground/80"
               >
-                Download: AltiElements.apk
+                Get APK here: AltiElements.apk
               </a>
             </div>
           </div>
@@ -263,6 +265,20 @@ function AltiElements() {
         </div>
       </section>
         
+      <section className="mt-16 mb-8 flex flex-col items-center justify-center text-center">
+        <div 
+          className="group relative flex cursor-pointer flex-col items-center justify-center"
+          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+        >
+          <div className="absolute inset-0 rounded-full bg-foreground/5 blur-xl opacity-0 transition-opacity duration-500 group-hover:opacity-100"></div>
+          <button className="relative flex h-14 w-14 items-center justify-center rounded-full border border-border bg-background shadow-sm transition-all duration-500 ease-out group-hover:-translate-y-2 group-hover:shadow-md">
+            <ArrowRight className="h-5 w-5 -rotate-90 text-muted-foreground transition-colors duration-300 group-hover:text-foreground" />
+          </button>
+          <p className="mono mt-6 text-[10px] uppercase tracking-[0.3em] text-muted-foreground transition-colors duration-300 group-hover:text-foreground">
+            Back to top
+          </p>
+        </div>
+      </section>
     </PageShell>
   )
 }
