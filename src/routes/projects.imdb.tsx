@@ -193,7 +193,7 @@ function IMDbSentimentAnalysisPage() {
               <img
                 loading="lazy"
                 decoding="async"
-                src="/Images/IMDbHist.webp"
+                src="/Images/imdHist.webp"
                 alt="Histogram showing the distribution of IMDb ratings in the dataset"
                 className="mb-3 h-auto w-5/6 rounded-2xl"
               />

@@ -16,14 +16,16 @@ export const Route = createFileRoute("/projects/3d")({
       subtitle="Interactive experiences, prototypes and 3D scenes built with Unity and Blender."
       projects={[
         {
-          title: "Mini Game",
-          description: "A small Unity prototype exploring a mechanic or concept.",
+          title: "Project_Dragon",
+          description: "3D game prototype developed in Unity Engine as the final project for the Animation in Virtual Environments course",
+          link: "/projects/Project_Dragon",
           tags: ["Unity", "C#"],
         },
         {
-          title: "3D Scene",
-          description: "A Blender scene or asset — replace with your real renders.",
-          tags: ["Blender", "Modelling"],
+          title: "AltiElements",
+          description: "A 2D mobile game project developed in Unity.",
+          link: "/projects/AltiElements",
+          tags: ["Unity", "C#"],
         },
       ]}
     />

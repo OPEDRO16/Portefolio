@@ -20,12 +20,14 @@ import { Route as ProjectsImageSearchRouteImport } from './routes/projects.image
 import { Route as ProjectsDesignRouteImport } from './routes/projects.design'
 import { Route as ProjectsVetCareRouteImport } from './routes/projects.VetCare'
 import { Route as ProjectsRoPaScRouteImport } from './routes/projects.RoPaSc'
+import { Route as ProjectsProject_DragonRouteImport } from './routes/projects.Project_Dragon'
 import { Route as ProjectsLegoRecognitionRouteImport } from './routes/projects.LegoRecognition'
 import { Route as ProjectsImageProcessingRouteImport } from './routes/projects.ImageProcessing'
 import { Route as ProjectsIECDRouteImport } from './routes/projects.IECD'
 import { Route as ProjectsIASARouteImport } from './routes/projects.IASA'
 import { Route as ProjectsChaosGameRouteImport } from './routes/projects.ChaosGame'
 import { Route as ProjectsBlackJachRouteImport } from './routes/projects.BlackJach'
+import { Route as ProjectsAltiElementsRouteImport } from './routes/projects.AltiElements'
 import { Route as Projects3dRouteImport } from './routes/projects.3d'
 
 const NowRoute = NowRouteImport.update({
@@ -83,6 +85,11 @@ const ProjectsRoPaScRoute = ProjectsRoPaScRouteImport.update({
   path: '/projects/RoPaSc',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ProjectsProject_DragonRoute = ProjectsProject_DragonRouteImport.update({
+  id: '/projects/Project_Dragon',
+  path: '/projects/Project_Dragon',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ProjectsLegoRecognitionRoute = ProjectsLegoRecognitionRouteImport.update({
   id: '/projects/LegoRecognition',
   path: '/projects/LegoRecognition',
@@ -113,6 +120,11 @@ const ProjectsBlackJachRoute = ProjectsBlackJachRouteImport.update({
   path: '/projects/BlackJach',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ProjectsAltiElementsRoute = ProjectsAltiElementsRouteImport.update({
+  id: '/projects/AltiElements',
+  path: '/projects/AltiElements',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const Projects3dRoute = Projects3dRouteImport.update({
   id: '/projects/3d',
   path: '/projects/3d',
@@ -123,12 +135,14 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/now': typeof NowRoute
   '/projects/3d': typeof Projects3dRoute
+  '/projects/AltiElements': typeof ProjectsAltiElementsRoute
   '/projects/BlackJach': typeof ProjectsBlackJachRoute
   '/projects/ChaosGame': typeof ProjectsChaosGameRoute
   '/projects/IASA': typeof ProjectsIASARoute
   '/projects/IECD': typeof ProjectsIECDRoute
   '/projects/ImageProcessing': typeof ProjectsImageProcessingRoute
   '/projects/LegoRecognition': typeof ProjectsLegoRecognitionRoute
+  '/projects/Project_Dragon': typeof ProjectsProject_DragonRoute
   '/projects/RoPaSc': typeof ProjectsRoPaScRoute
   '/projects/VetCare': typeof ProjectsVetCareRoute
   '/projects/design': typeof ProjectsDesignRoute
@@ -143,12 +157,14 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/now': typeof NowRoute
   '/projects/3d': typeof Projects3dRoute
+  '/projects/AltiElements': typeof ProjectsAltiElementsRoute
   '/projects/BlackJach': typeof ProjectsBlackJachRoute
   '/projects/ChaosGame': typeof ProjectsChaosGameRoute
   '/projects/IASA': typeof ProjectsIASARoute
   '/projects/IECD': typeof ProjectsIECDRoute
   '/projects/ImageProcessing': typeof ProjectsImageProcessingRoute
   '/projects/LegoRecognition': typeof ProjectsLegoRecognitionRoute
+  '/projects/Project_Dragon': typeof ProjectsProject_DragonRoute
   '/projects/RoPaSc': typeof ProjectsRoPaScRoute
   '/projects/VetCare': typeof ProjectsVetCareRoute
   '/projects/design': typeof ProjectsDesignRoute
@@ -164,12 +180,14 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/now': typeof NowRoute
   '/projects/3d': typeof Projects3dRoute
+  '/projects/AltiElements': typeof ProjectsAltiElementsRoute
   '/projects/BlackJach': typeof ProjectsBlackJachRoute
   '/projects/ChaosGame': typeof ProjectsChaosGameRoute
   '/projects/IASA': typeof ProjectsIASARoute
   '/projects/IECD': typeof ProjectsIECDRoute
   '/projects/ImageProcessing': typeof ProjectsImageProcessingRoute
   '/projects/LegoRecognition': typeof ProjectsLegoRecognitionRoute
+  '/projects/Project_Dragon': typeof ProjectsProject_DragonRoute
   '/projects/RoPaSc': typeof ProjectsRoPaScRoute
   '/projects/VetCare': typeof ProjectsVetCareRoute
   '/projects/design': typeof ProjectsDesignRoute
@@ -186,12 +204,14 @@ export interface FileRouteTypes {
     | '/'
     | '/now'
     | '/projects/3d'
+    | '/projects/AltiElements'
     | '/projects/BlackJach'
     | '/projects/ChaosGame'
     | '/projects/IASA'
     | '/projects/IECD'
     | '/projects/ImageProcessing'
     | '/projects/LegoRecognition'
+    | '/projects/Project_Dragon'
     | '/projects/RoPaSc'
     | '/projects/VetCare'
     | '/projects/design'
@@ -206,12 +226,14 @@ export interface FileRouteTypes {
     | '/'
     | '/now'
     | '/projects/3d'
+    | '/projects/AltiElements'
     | '/projects/BlackJach'
     | '/projects/ChaosGame'
     | '/projects/IASA'
     | '/projects/IECD'
     | '/projects/ImageProcessing'
     | '/projects/LegoRecognition'
+    | '/projects/Project_Dragon'
     | '/projects/RoPaSc'
     | '/projects/VetCare'
     | '/projects/design'
@@ -226,12 +248,14 @@ export interface FileRouteTypes {
     | '/'
     | '/now'
     | '/projects/3d'
+    | '/projects/AltiElements'
     | '/projects/BlackJach'
     | '/projects/ChaosGame'
     | '/projects/IASA'
     | '/projects/IECD'
     | '/projects/ImageProcessing'
     | '/projects/LegoRecognition'
+    | '/projects/Project_Dragon'
     | '/projects/RoPaSc'
     | '/projects/VetCare'
     | '/projects/design'
@@ -247,12 +271,14 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   NowRoute: typeof NowRoute
   Projects3dRoute: typeof Projects3dRoute
+  ProjectsAltiElementsRoute: typeof ProjectsAltiElementsRoute
   ProjectsBlackJachRoute: typeof ProjectsBlackJachRoute
   ProjectsChaosGameRoute: typeof ProjectsChaosGameRoute
   ProjectsIASARoute: typeof ProjectsIASARoute
   ProjectsIECDRoute: typeof ProjectsIECDRoute
   ProjectsImageProcessingRoute: typeof ProjectsImageProcessingRoute
   ProjectsLegoRecognitionRoute: typeof ProjectsLegoRecognitionRoute
+  ProjectsProject_DragonRoute: typeof ProjectsProject_DragonRoute
   ProjectsRoPaScRoute: typeof ProjectsRoPaScRoute
   ProjectsVetCareRoute: typeof ProjectsVetCareRoute
   ProjectsDesignRoute: typeof ProjectsDesignRoute
@@ -343,6 +369,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ProjectsRoPaScRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/projects/Project_Dragon': {
+      id: '/projects/Project_Dragon'
+      path: '/projects/Project_Dragon'
+      fullPath: '/projects/Project_Dragon'
+      preLoaderRoute: typeof ProjectsProject_DragonRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/projects/LegoRecognition': {
       id: '/projects/LegoRecognition'
       path: '/projects/LegoRecognition'
@@ -385,6 +418,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ProjectsBlackJachRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/projects/AltiElements': {
+      id: '/projects/AltiElements'
+      path: '/projects/AltiElements'
+      fullPath: '/projects/AltiElements'
+      preLoaderRoute: typeof ProjectsAltiElementsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/projects/3d': {
       id: '/projects/3d'
       path: '/projects/3d'
@@ -399,12 +439,14 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   NowRoute: NowRoute,
   Projects3dRoute: Projects3dRoute,
+  ProjectsAltiElementsRoute: ProjectsAltiElementsRoute,
   ProjectsBlackJachRoute: ProjectsBlackJachRoute,
   ProjectsChaosGameRoute: ProjectsChaosGameRoute,
   ProjectsIASARoute: ProjectsIASARoute,
   ProjectsIECDRoute: ProjectsIECDRoute,
   ProjectsImageProcessingRoute: ProjectsImageProcessingRoute,
   ProjectsLegoRecognitionRoute: ProjectsLegoRecognitionRoute,
+  ProjectsProject_DragonRoute: ProjectsProject_DragonRoute,
   ProjectsRoPaScRoute: ProjectsRoPaScRoute,
   ProjectsVetCareRoute: ProjectsVetCareRoute,
   ProjectsDesignRoute: ProjectsDesignRoute,
