@@ -40,7 +40,7 @@ const skills: { name: string; slug?: string; customIcon?: React.ReactNode }[] = 
 ];
 
 const nowItems = [
-  { icon: Hammer, label: "Building", value: "a 2D game in Unity" },
+  { icon: Hammer, label: "Building", value: "A.S.T.R.A, an 3D local co-op game focused on providing people whit vision and hearing impairments a gaming experience as well as giving people without impairments a way to experience it from their prespective." },
 ];
 
 function Index() {

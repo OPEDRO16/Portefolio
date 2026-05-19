@@ -26,7 +26,7 @@ export const Route = createFileRoute("/projects/3d")({
           description: "A 2D mobile game project developed in Unity.",
           link: "/projects/AltiElements",
           tags: ["Unity", "C#"],
-        },
+        }
       ]}
     />
   ),
