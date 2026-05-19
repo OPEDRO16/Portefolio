@@ -16,7 +16,7 @@ export const Route = createFileRoute("/now")({
 
 function NowPage() {
   return (
-    <PageShell showBack>
+    <PageShell showBack backTo="/">
       {/* Header */}
       <section className="surface-card p-6 md:p-10">
         <p className="mono text-[11px] uppercase tracking-[0.25em] text-muted-foreground mb-3 flex items-center gap-2">
@@ -59,6 +59,18 @@ function NowPage() {
             <video controls className="w-full aspect-video bg-foreground" poster="/now/poster.jpg">
             <source src="/Images/Astra3.mp4" type="video/mp4" />
           </video>
+          </div>
+        </div>
+
+        {/* Media gallery — placeholders, swap for real images/videos */}
+        <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="aspect-video bg-foreground/5 border border-border flex items-center justify-center text-muted-foreground mono text-[11px] uppercase tracking-[0.25em]">
+            <video controls className="w-full h-full object-cover">
+              <source src="/Images/Astra4.mp4" type="video/mp4" />
+            </video>
+          </div>
+          <div className="aspect-video bg-foreground/5 border border-border flex items-center justify-center text-muted-foreground mono text-[11px] uppercase tracking-[0.25em]">
+            <img src="/Images/Astra5.webp" alt="Logo" className="w-full h-full object-cover" />
           </div>
         </div>
       </section>

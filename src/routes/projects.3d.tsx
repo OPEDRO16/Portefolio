@@ -26,6 +26,12 @@ export const Route = createFileRoute("/projects/3d")({
           description: "A 2D mobile game project developed in Unity.",
           link: "/projects/AltiElements",
           tags: ["Unity", "C#"],
+        },
+        {
+          title: "A.S.T.R.A",
+          description: "A 3D local co-op game focused on providing people whit vision and hearing impairments a gaming experience.",
+          link: "/now",
+          tags: ["Unity", "C#"],
         }
       ]}
     />
