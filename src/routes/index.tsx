@@ -122,7 +122,7 @@ function Index() {
       >
         <div className="flex items-baseline justify-between mb-5">
           <h2 className="mono text-xs uppercase tracking-[0.3em] flex items-center gap-2">
-            / Now
+            / Last Project
             <ArrowUpRight className="h-3.5 w-3.5 transition-transform group-hover:rotate-45" />
           </h2>
           <span className="mono text-[11px] uppercase tracking-[0.25em] text-muted-foreground group-hover:text-background/60">
