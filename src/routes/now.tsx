@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageShell } from "@/components/portfolio/PageShell";
-import { ArrowUpRight, Calendar, FileText, Hammer, Play, Download } from "lucide-react";
+import { ArrowRight, Calendar, CheckCircle2 } from "lucide-react";
 
 export const Route = createFileRoute("/now")({
   head: () => ({
@@ -21,7 +21,7 @@ function NowPage() {
       <section className="surface-card p-6 md:p-10">
         <p className="mono text-[11px] uppercase tracking-[0.25em] text-muted-foreground mb-3 flex items-center gap-2">
           <Calendar className="h-3 w-3" />
-          {new Date().toLocaleDateString("en-US", { month: "long", year: "numeric" })}
+          July 2026
         </p>
         <h1 className="display text-5xl md:text-7xl">/ Last Project</h1>
         <p className="mt-4 text-muted-foreground max-w-2xl leading-relaxed">
@@ -29,13 +29,12 @@ function NowPage() {
         </p>
       </section>
 
-      {/* Current project — Building */}
+      {/* Completed project */}
       <section className="surface-card p-6 md:p-10">
         <div className="flex items-baseline justify-between mb-6">
           <h2 className="mono text-xs uppercase tracking-[0.3em] flex items-center gap-2">
-            <Hammer className="h-3.5 w-3.5" /> Building
+            <CheckCircle2 className="h-3.5 w-3.5" /> Completed
           </h2>
-          <span className="mono text-[11px] uppercase tracking-[0.25em] text-muted-foreground">In progress</span>
         </div>
         <h3 className="display text-3xl md:text-5xl mb-4">A.S.T.R.A </h3>
         <p className="text-muted-foreground leading-relaxed max-w-3xl">
@@ -78,54 +77,28 @@ function NowPage() {
       <section className="surface-card p-6 md:p-10">
         <div className="flex items-baseline justify-between mb-6">
           <h2 className="mono text-xs uppercase tracking-[0.3em] flex items-center gap-2">
-            <Download className="h-3.5 w-3.5" /> Resources
+            <ArrowRight className="h-3.5 w-3.5" /> Resources
           </h2>
           <span className="mono text-[11px] uppercase tracking-[0.25em] text-muted-foreground">
             A.S.T.R.A
           </span>
         </div>
-        <div className="grid gap-4 md:grid-cols-3">
+        <div className="grid gap-4 md:grid-cols-2">
           <a
-            href="https://drive.google.com/drive/folders/1fDWMSMA1nfo1ixwYXy_73Cyw0AF5MDQQ?usp=sharing"
+            href="https://drive.google.com/drive/folders/1tZ1K8JT10wOPyDpbbpIzLXpxCEtbiyZZ?usp=sharing"
             target="_blank"
             rel="noreferrer"
-            className="group border border-border bg-foreground/5 p-5 transition hover:bg-foreground hover:text-background"
+            className="rounded-3xl border border-border bg-foreground/5 p-5 text-sm text-muted-foreground transition hover:bg-foreground/10"
           >
-            <Download className="h-5 w-5 mb-8 transition-transform group-hover:-translate-y-1" />
-            <p className="mono text-[11px] uppercase tracking-[0.2em] text-muted-foreground group-hover:text-background/60">
-              Windows build
-            </p>
-            <p className="mt-2 flex items-center justify-between font-medium">
-              Download project <ArrowUpRight className="h-4 w-4 transition-transform group-hover:rotate-45" />
-            </p>
+            Build & playthrough (Drive)
           </a>
           <a
-            href="https://drive.google.com/file/d/19TJXGDMnrpdsXKLAFE-XYt105jb8eEG8/view?usp=sharing"
+            href="/files/Relatorio_PRJ_56_51628_51959.pdf"
             target="_blank"
             rel="noreferrer"
-            className="group border border-border bg-foreground/5 p-5 transition hover:bg-foreground hover:text-background"
+            className="rounded-3xl border border-border bg-foreground/5 p-5 text-sm text-muted-foreground transition hover:bg-foreground/10"
           >
-            <Play className="h-5 w-5 mb-8 transition-transform group-hover:translate-x-1" />
-            <p className="mono text-[11px] uppercase tracking-[0.2em] text-muted-foreground group-hover:text-background/60">
-              Video demonstration
-            </p>
-            <p className="mt-2 flex items-center justify-between font-medium">
-              Watch demo <ArrowUpRight className="h-4 w-4 transition-transform group-hover:rotate-45" />
-            </p>
-          </a>
-          <a
-            href="/files/Projeto1.pdf"
-            target="_blank"
-            rel="noreferrer"
-            className="group border border-border bg-foreground/5 p-5 transition hover:bg-foreground hover:text-background"
-          >
-            <FileText className="h-5 w-5 mb-8 transition-transform group-hover:-translate-y-1" />
-            <p className="mono text-[11px] uppercase tracking-[0.2em] text-muted-foreground group-hover:text-background/60">
-              Project report
-            </p>
-            <p className="mt-2 flex items-center justify-between font-medium">
-              Open PDF <ArrowUpRight className="h-4 w-4 transition-transform group-hover:rotate-45" />
-            </p>
+            Report (pdf)
           </a>
         </div>
       </section>
