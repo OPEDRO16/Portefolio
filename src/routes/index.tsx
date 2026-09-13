@@ -58,7 +58,11 @@ function Index() {
         <div className="surface-card lg:col-span-2 p-6 md:p-10 flex flex-col md:flex-row gap-6 md:gap-8 items-start">
           <div className="relative shrink-0">
             <div className="relative h-32 w-32 md:h-40 md:w-40 bg-foreground text-background flex items-center justify-center overflow-hidden">
-              <span className="display text-6xl md:text-7xl">PM</span>
+              <img
+                src="/Images/ProfilePic.webp"
+                alt="Pedro Marques"
+                className="h-full w-full scale-[4] object-cover object-[50%_29%]"
+              />
             </div>
           </div>
           <div className="flex-1">
