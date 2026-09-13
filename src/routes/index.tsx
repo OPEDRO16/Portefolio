@@ -69,7 +69,7 @@ function Index() {
               Pedro Marques
             </h1>
             <p className="mt-4 text-base md:text-lg text-muted-foreground leading-relaxed">
-              Currently studying Informatics and Multimedia Engineering at ISEL in Lisbon. {" "}
+              Having graduated in Informatics and Multimedia Engineering from ISEL in Lisbon, I am currently studying for a Master's in Informatics Engineering at FCUL. {" "}
               When I'm not coding or studying, you can usually find me at the gym or playing some games.
             </p>
             <div className="mt-6 flex flex-wrap gap-2">
